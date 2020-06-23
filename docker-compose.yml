@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  reverse-proxy:
+    image: nginx:1.17.10
+    container_name: reverse_proxy
+    volumes:
+      - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+
+  # # Sites
+  foo:
+    image: jwilder/whoami
+    ports:
+      - 8000:8000
+
+  bar:
+    image: jwilder/whoami
+    ports:
+      - 8001:8000
+
+  baz:
+    image: jwilder/whoami
+    ports:
+      - 8002:8000
