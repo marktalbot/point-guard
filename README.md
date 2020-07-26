@@ -1,5 +1,7 @@
 # point-guard
 
+A simple NGINX reverse proxy using Docker.
+
 ### Proof of concept
 
 #### Usage
