@@ -56,6 +56,8 @@ server {
     }
 ```
 Note that in the `proxy_pass` directive, `mycoolapp` is the name of your service in the `docker-comose` file, and `80` is the port exposed by your service's docker container (_not_ your host port).
+In other words, use the following format for the `proxy_pass` value: `http://<container-name>:<docker-port>`
+
 
 You should now be able to access your app via:
 
